@@ -230,7 +230,7 @@ The onboard camera measures position error in its own optical frame, but the fli
 
 
 
-Camera Frame (C)  ───[ Sandwich Operator: q v q⁻¹ ]───►  Body Frame (B)  ───►  PID Controller
+Camera Frame (C)  ───[ Sandwich Operator: q v q* ]───►  Body Frame (B)  ───►  PID Controller
 (Raw Error Vector)                                     (Aligned Error)       (Actuator Commands)
 
 
@@ -240,19 +240,19 @@ Camera Frame (C)  ───[ Sandwich Operator: q v q⁻¹ ]───►  Body F
 * **Quaternion Representation:** A unit quaternion $\mathbf{q}$ stores the 3D orientation/tilt of the vehicle, but a quaternion alone cannot rotate a 3D vector without an algebraic operator.
 * **Double-Cover & Distortion Elimination:** Simple left-multiplication ($\mathbf{q}\mathbf{v}$) produces a four-dimensional result with unwanted scaling/projection artifacts. The **Sandwich Operator** maps a pure spatial vector back into the 3-vector space cleanly:
 
-$$v' = q \, v \, q^{-1}$$
+$$v' = q \, v \, q^{*}$$
 
 Where:
 * $v = [0, \mathbf{e}_{cam}]^T$ is the raw visual position error treated as a pure vector quaternion.
 * $q$ is the unit attitude quaternion representing current vehicle tilt.
-* $q^{-1} = q^*$ is the quaternion conjugate (inverse for unit quaternions).
+* $q^{*} = q^*$ is the quaternion conjugate (inverse for unit quaternions).
 * $v' = [0, \mathbf{e}_{body}]^T$ is the transformed position error vector.
 
 #### Integration in Control Loop
 
 The resulting vector $v'$ represents the exact relative position error re-expressed in the drone's body frame:
 
-$$\mathbf{e}_{body} = \text{vec}\left( q \, [0, \mathbf{e}_{cam}] \, q^{-1} \right)$$
+$$\mathbf{e}_{body} = \text{vec}\left( q \, [0, \mathbf{e}_{cam}] \, q^{*} \right)$$
 
 This transformed error is routed directly into the **PID controller** to generate accurate thrust, roll, and pitch commands without frame misalignment errors.
 
