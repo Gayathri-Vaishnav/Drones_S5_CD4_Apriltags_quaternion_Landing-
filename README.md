@@ -79,6 +79,15 @@ Further extensions beyond the base paper:
 
 By combining the proven vision-based landing architecture of the base paper with a quaternion-based attitude formulation, this project demonstrates a practical, singularity-free improvement to an established autonomous landing method.
 
+<h2 align="center">Fig 2.1</h2>
+
+<p align="center">
+  <img width="1000" alt="Fig 2.1" src="images/fig2_1_process_overview.png" />
+</p>
+
+<p align="center"><i>How one delivery works. (a) The radio beacon brings the drone within ±2.5 m of the address; the first decode of tag ID k switches guidance to vision; the drone descends inside the cone, hands over from the large tag to the small tag between 2.49 m and 1.06 m, and commits below the decision height. (b)–(d) What the onboard camera sees at 8 m, 2 m and 0.45 m (computed from the pinhole model). (e) Layout of one pad.</i></p>
+
+
 ### 3.  Base paper/ Literature Survey 
 <h2 align="center">Table 3.1</h2>
 
