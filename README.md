@@ -1,4 +1,5 @@
 
+
 <p align="center">
   <img width="700" height="90" alt="image" src="https://github.com/user-attachments/assets/a9600b74-0941-4c72-833f-af076c559691" />
 </p>
@@ -355,7 +356,8 @@ $$
 <h2 align="center">Fig 4.2</h2>
 
 <p align="center">
-<img width="800" alt="Signal flow: base paper blocks in blue, our additions in orange" src="images/mj_diag_pipeline.png" />
+<img width="1481" height="939" alt="mj_diag_pipeline" src="https://github.com/user-attachments/assets/50c967ce-959c-4c3e-9fcb-fe911cead88e" />
+  
 </p>
 
 <p align="center"><i>Signal flow of the final system. Blue blocks are from the base paper, orange blocks are added by this project, and grey blocks are hardware and physics. The camera image of the moved drone closes the loop.</i></p>
@@ -363,8 +365,10 @@ $$
 <h2 align="center">Fig 4.3</h2>
 
 <p align="center">
-<img width="800" alt="Simulated street with ten addressed pads" src="images/mj_fig0_scene.png" />
+  <img width="1598" height="881" alt="Simulated street with ten addressed pads" src="https://github.com/user-attachments/assets/f0038acf-5a46-4a4c-888a-3216a2ff34be" />
 </p>
+
+
 
 <p align="center"><i>The simulated street: ten addressed pads (street, moving vehicles, roofs), and the onboard camera images at 8 m, 2 m and 0.45 m.</i></p>
 
