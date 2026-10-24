@@ -82,8 +82,11 @@ By combining the proven vision-based landing architecture of the base paper with
 <h2 align="center">Fig 2.1</h2>
 
 <p align="center">
-  <img width="1000" alt="Fig 2.1" src="<img width="2245" height="1190" alt="fig2_1_process_overview" src="https://github.com/user-attachments/assets/b3499fbc-888d-4896-88b8-78fc4deddf41" />
-" />
+  <img
+    width="1000"
+    alt="Fig 2.1 - Process Overview"
+    src="https://github.com/user-attachments/assets/b3499fbc-888d-4896-88b8-78fc4deddf41"
+  />
 </p>
 
 <p align="center"><i>How one delivery works. (a) The radio beacon brings the drone within ±2.5 m of the address; the first decode of tag ID k switches guidance to vision; the drone descends inside the cone, hands over from the large tag to the small tag between 2.49 m and 1.06 m, and commits below the decision height. (b)–(d) What the onboard camera sees at 8 m, 2 m and 0.45 m (computed from the pinhole model). (e) Layout of one pad.</i></p>
