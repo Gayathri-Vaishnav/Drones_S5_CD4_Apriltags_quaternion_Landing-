@@ -456,15 +456,17 @@ Further results:
 - Mid-flight change of address: 20/20 landed, mean 2.94 cm, 0 go-arounds.
 - SLERP heading smoothing: 2.7° → 1.6° heading noise, 1.9 → 1.1 cm pad-centre noise.
 
-<img width="1934" alt="MuJoCo panel: world view, onboard camera and address buttons" src="images/mujoco_panel.png" />
-<img width="1934" alt="Static landing with real AprilTag detection" src="images/mj_fig2_static.png" />
-<img width="1934" alt="Landing on a pad carried by a moving vehicle" src="images/mj_fig3_dynamic.png" />
-<img width="1934" alt="Ablation: what the fixed-gain PID cannot do on its own" src="images/mj_fig4_ablation.png" />
-<img width="1934" alt="Repeatability across all ten addresses" src="images/mj_fig5_monte_carlo.png" />
-<img width="1934" alt="Vision pipeline measured against ground truth" src="images/mj_fig1_perception.png" />
-<img width="960" alt="MATLAB 3D landing" src="images/matlab3d.png" />
-<img width="960" alt="NetLogo model" src="images/netlogo.png" />
-<img width="960" alt="MuJoCo landing demo" src="images/demo_landing.gif" />
+### Drone detecting apriltag stimulation in mujoco 
+
+<img width="653" height="366" alt="mujoco_panel" src="https://github.com/user-attachments/assets/3976770c-3f0c-4fde-86e3-dfac9e1d1daf" />
+
+### This picture shows the stimulation of drone detecting the apriltag in netlogo:
+
+<img width="1550" height="903" alt="netlogo" src="https://github.com/user-attachments/assets/08ac1ee9-992d-4d4e-9333-96200f1f7fde" />
+
+# monte carlo distribution
+
+<img width="1652" height="764" alt="mj_fig5_monte_carlo" src="https://github.com/user-attachments/assets/3f3f3f66-0d58-41cf-8440-ee529f54a8bf" />
 
 
 
