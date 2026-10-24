@@ -418,14 +418,16 @@ This differs from the base paper in four important ways:
 
 <h2 align="center">Fig 6.2</h2>
 <p align="center">
-<img width="800" alt="Mission phases state machine" src="images/mj_diag_states.png" />
+<img width="1539" height="558" alt="mj_diag_states" src="https://github.com/user-attachments/assets/b21ec3d3-f8c5-4b25-a0b8-d342b021a2d7" />
+
 </p>
 
 <p align="center"><i>Mission phases. Guidance switches from radio to vision exactly once, at the first decode of the addressed marker. If the tag is lost or the offset leaves the cone, the drone climbs and re-acquires.</i></p>
 
 <h2 align="center">Fig 6.3</h2>
 <p align="center">
-<img width="600" alt="Dual-scale pad design" src="images/mj_diag_pad.png" />
+<img width="1194" height="1116" alt="mj_diag_pad" src="https://github.com/user-attachments/assets/1024e020-0056-443b-8df1-e1d8198bbc7f" />
+
 </p>
 
 <p align="center"><i>One pad carries two markers of two sizes with two IDs. The large tag reads from 1.06 to 8.73 m and the small tag below 2.49 m.</i></p>
@@ -459,6 +461,9 @@ Further results:
 ### Drone detecting apriltag stimulation in mujoco 
 
 <img width="653" height="366" alt="mujoco_panel" src="https://github.com/user-attachments/assets/3976770c-3f0c-4fde-86e3-dfac9e1d1daf" />
+
+<img width="480" height="269" alt="demo_landing" src="https://github.com/user-attachments/assets/dc90f950-ec85-4283-b07c-edfab6a17b50" />
+
 
 ### This picture shows the stimulation of drone detecting the apriltag in netlogo:
 
