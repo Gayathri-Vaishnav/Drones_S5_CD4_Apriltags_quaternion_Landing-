@@ -1,0 +1,7 @@
+# Sensors and estimation status
+
+The current perception path renders a world-stabilized downward camera (TinyRenderer in DIRECT, hardware OpenGL requested in GUI), uses flat UV-mapped tag36h11 textures and a nominal zero-distortion camera matrix, decodes markers, and solves tag pose with OpenCV. A constant-velocity Kalman filter estimates the selected tag's world position and velocity, propagates covariance, and rejects measurements with a 3D Mahalanobis distance above its configured gate. Its innovation, gate statistic, accepted flag, position uncertainty, and measurement age are recorded in telemetry. Moving-target guidance extrapolates a bounded 0.2–1.25 s intercept during approach and high descent. If the tag is lost, the mission uses its beacon or last estimate; there is still no vehicle EKF.
+
+Not yet implemented: IMU, GPS, altimeter, or camera noise/bias/latency; motion blur and lens distortion; camera calibration and undistortion; multi-tag confidence fusion; a vehicle EKF/error-state KF fusing inertial, altitude/GPS and visual measurements; out-of-sequence delayed-measurement handling; battery/current/SoC estimation. Target-filter covariance is not a vehicle-state covariance. The beacon is a synthetic initial waypoint proxy, not a sensor observation.
+
+The ten-address camera check confirms only that a selected acquisition or terminal tag was detected from a fixed overhead view. Address 1 was detected at heights from 2 to 10 m. It does not validate pose accuracy across view angle, lighting or occlusion.

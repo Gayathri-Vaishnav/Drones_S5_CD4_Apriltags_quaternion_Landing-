@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "scenario": "static_ground",
+  "passed": true,
+  "baseline_trial_count": 2,
+  "candidate_trial_count": 2,
+  "tolerances": {
+    "success_rate_drop": 0.05,
+    "median_error_increase_m": 0.2,
+    "p95_error_increase_m": 0.5,
+    "decoded_fraction_drop": 0.1
+  },
+  "checks": [
+    {
+      "metric": "success_rate",
+      "status": "PASS",
+      "baseline": 0.0,
+      "candidate": 0.0,
+      "change": 0.0,
+      "allowed_degradation": 0.05
+    },
+    {
+      "metric": "median_final_horizontal_error_m",
+      "status": "PASS",
+      "baseline": 2.6742494287484133,
+      "candidate": 2.6742494287484133,
+      "change": 0.0,
+      "allowed_degradation": 0.2
+    },
+    {
+      "metric": "p95_final_horizontal_error_m",
+      "status": "PASS",
+      "baseline": 2.6780330240600425,
+      "candidate": 2.6780330240600425,
+      "change": 0.0,
+      "allowed_degradation": 0.5
+    },
+    {
+      "metric": "decoded_fraction",
+      "status": "PASS",
+      "baseline": 0.21875,
+      "candidate": 0.21875,
+      "change": 0.0,
+      "allowed_degradation": 0.1
+    }
+  ]
+}

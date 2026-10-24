@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-23T13:36:10.782583+05:30",
+  "seed_start": 410,
+  "duration_s": 5.0,
+  "worker_count": 1,
+  "scenario_schema_version": 1,
+  "scenarios": {
+    "static_ground": {
+      "trial_count": 2,
+      "landed_count": 0,
+      "success_rate": 0.0,
+      "success_rate_wilson_95": [
+        0.0,
+        0.6576197724933469
+      ],
+      "median_final_horizontal_error_m": 2.6742494287484133,
+      "p95_final_horizontal_error_m": 2.6780330240600425,
+      "median_landed_error_m": null,
+      "trial_results": [
+        {
+          "address": 1,
+          "seed": 410,
+          "phase": "APPROACH",
+          "landed": false,
+          "success": false,
+          "final_horizontal_error_m": 2.6780330240600425,
+          "decoded_frames": 28,
+          "decoded_fraction": 0.21875,
+          "mean_tag_pose_error_m": 0.03253018115651602,
+          "frames": 128,
+          "simulated_seconds": 5.000000000000038,
+          "time_to_acquire_s": 4.09166666666666,
+          "time_to_land_s": null,
+          "touchdown_speed_m_s": null,
+          "max_tilt_deg": 12.902559830856074,
+          "path_length_m": 9.204339552051653,
+          "energy_j": null,
+          "energy_status": "not modeled; battery/power model pending",
+          "failsafe_events": [],
+          "camera_mean_s": 0.23648864893613714,
+          "controller_mean_s": 0.0006691080000003543,
+          "physics_step_mean_s": 0.001317050833322355,
+          "timing": {
+            "camera_render_s": {
+              "samples": 47,
+              "mean_s": 0.23648864893613714,
+              "median_s": 0.25257009999995716,
+              "p95_s": 0.29152262999987216,
+              "max_s": 0.30255910000005315
+            },
+            "tag_detection_s": {
+              "samples": 47,
+              "mean_s": 0.004047651063840331,
+              "median_s": 0.0037736999997832754,
+              "p95_s": 0.006048550000105024,
+              "max_s": 0.014028900000084832
+            },
+            "controller_s": {
+              "samples": 600,
+              "mean_s": 0.0006691080000003543,
+              "median_s": 0.0007857000000512926,
+              "p95_s": 0.00099559999991925,
+              "max_s": 0.001418300000295858
+            },
+            "physics_step_s": {
+              "samples": 600,
+              "mean_s": 0.001317050833322355,
+              "median_s": 0.0014800499998273153,
+              "p95_s": 0.0018145349999031167,
+              "max_s": 0.002434699999867007
+            },
+            "physics_cycle_overruns": {
+              "count": 0,
+              "fraction": 0.0,
+              "budget_s": 0.008333333333333333
+            }
+          },
+          "final_contact": false,
+          "final_sample_time_s": 4.991666666666704
+        },
+        {
+          "address": 1,
+          "seed": 411,
+          "phase": "APPROACH",
+          "landed": false,
+          "success": false,
+          "final_horizontal_error_m": 2.6704658334367846,
+          "decoded_frames": 28,
+          "decoded_fraction": 0.21875,
+          "mean_tag_pose_error_m": 0.0882401040271891,
+          "frames": 128,
+          "simulated_seconds": 5.000000000000038,
+          "time_to_acquire_s": 4.09166666666666,
+          "time_to_land_s": null,
+          "touchdown_speed_m_s": null,
+          "max_tilt_deg": 12.90355589584025,
+          "path_length_m": 9.240878300715776,
+          "energy_j": null,
+          "energy_status": "not modeled; battery/power model pending",
+          "failsafe_events": [],
+          "camera_mean_s": 0.26952244468087344,
+          "controller_mean_s": 0.0008133091666635058,
+          "physics_step_mean_s": 0.0015295583333371117,
+          "timing": {
+            "camera_render_s": {
+              "samples": 47,
+              "mean_s": 0.26952244468087344,
+              "median_s": 0.27321249999977226,
+              "p95_s": 0.322934720000103,
+              "max_s": 0.3579496000002109
+            },
+            "tag_detection_s": {
+              "samples": 47,
+              "mean_s": 0.003963506382980144,
+              "median_s": 0.0037224999996396946,
+              "p95_s": 0.00515056000003824,
+              "max_s": 0.005599900000106572
+            },
+            "controller_s": {
+              "samples": 600,
+              "mean_s": 0.0008133091666635058,
+              "median_s": 0.0008460500000637694,
+              "p95_s": 0.0010261249997711272,
+              "max_s": 0.0011611999998422107
+            },
+            "physics_step_s": {
+              "samples": 600,
+              "mean_s": 0.0015295583333371117,
+              "median_s": 0.0015839000000141823,
+              "p95_s": 0.0018330499999592573,
+              "max_s": 0.0038564000001315435
+            },
+            "physics_cycle_overruns": {
+              "count": 0,
+              "fraction": 0.0,
+              "budget_s": 0.008333333333333333
+            }
+          },
+          "final_contact": false,
+          "final_sample_time_s": 4.991666666666704
+        }
+      ]
+    }
+  },
+  "baseline_metadata": {
+    "purpose": "5-second static-ground smoke regression baseline",
+    "captured_utc": "2026-10-23T08:06:10Z",
+    "trials": 2,
+    "seed_start": 410,
+    "duration_s": 5,
+    "limitation": "Acquisition/approach plumbing only; not a landing-performance benchmark."
+  }
+}

@@ -1,0 +1,9 @@
+# Python 3.11–3.13 runtime dependencies. This maintained drop-in PyBullet fork
+# has pinned Windows x64 wheels and imports under the `pybullet` module name.
+pybullet-arm64==3.2.8
+numpy==2.5.4
+opencv-contrib-python==5.0.0.93
+pupil-apriltags==1.0.4.post11
+matplotlib==3.11.2
+pillow==12.3.0
+pandas==3.0.6

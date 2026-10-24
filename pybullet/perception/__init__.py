@@ -1,0 +1,1 @@
+"""Rendered-camera AprilTag perception."""

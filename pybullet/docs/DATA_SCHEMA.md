@@ -1,0 +1,13 @@
+# Telemetry schema
+
+The mission CSV uses a stable header defined by `simulation.TELEMETRY_FIELDS`. Positions and velocities are in metres and metres/second; attitude is degrees; angular rates are radians/second; `time_s` is simulation time. `address` and `tag_id` are integers. `pad_contact` is 0/1. `tag_pose_error_m` is the Euclidean distance from the tag-derived target estimate to the analytic target position, and `-1` means no valid selected-tag estimate for that row. `horizontal_error_m` is the current vehicle-to-target horizontal distance. `thrust_n` is the current total rotor thrust estimate.
+
+Columns: `time_s`, `address`, `phase`, `x_m`, `y_m`, `z_m`, `pad_x_m`, `pad_y_m`, `pad_z_m`, `horizontal_error_m`, `tag_id`, `tag_pose_error_m`, `vel_x_m_s`, `vel_y_m_s`, `vel_z_m_s`, `speed_m_s`, `roll_deg`, `pitch_deg`, `yaw_deg`, `angular_vel_x_rad_s`, `angular_vel_y_rad_s`, `angular_vel_z_rad_s`, `thrust_n`, `command_x_m`, `command_y_m`, `command_z_m`, `target_vel_x_m_s`, `target_vel_y_m_s`, `target_vel_z_m_s`, `pad_contact`, `tracker_innovation_x_m`, `tracker_innovation_y_m`, `tracker_innovation_z_m`, `tracker_mahalanobis`, `tracker_update_accepted`, `tracker_position_std_m`, `tracker_measurement_age_s`.
+
+Tracker innovation and covariance fields describe the target position filter, not an onboard vehicle-state EKF. `tracker_position_std_m` is the square root of the trace of the 3×3 position covariance; `tracker_update_accepted` is 0/1 for the most recent selected-tag measurement update.
+
+Manifests are JSON schema version 1 and include the scenario, random seed, configuration snapshot, runtime package/platform versions, fixed-step physics settings, and controller/camera/physics timing summaries. The batch runner writes common trial metrics including path length, time-to-acquire, touchdown speed and failsafe events. Energy is not currently modeled and is emitted as null.
+
+Run `python tools/validate_telemetry.py <mission.csv> [<mission.csv> ...]` to check the exact header/order, row width, finite numeric values, integer and boolean fields, monotonic simulation time, and one address per mission file. It exits nonzero on invalid input and can write a JSON report with `--json <report.json>`.
+
+`tests/test_telemetry_schema.py` and `tests/test_regression_guard.py` cover invalid telemetry and regression comparisons. `tools/regression_guard.py` compares a candidate batch summary with a frozen baseline and configurable tolerances. The committed short-run smoke baseline is only a 5-second address-1 acquisition/approach check; it does not measure landing success or establish acceptance performance. Replace or supplement it with a longer baseline after a valid landing campaign.

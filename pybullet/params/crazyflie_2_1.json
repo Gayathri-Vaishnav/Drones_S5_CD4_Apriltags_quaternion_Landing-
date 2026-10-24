@@ -1,0 +1,41 @@
+{
+  "vehicle": "Crazyflie 2.1 stock configuration (simulation nominal)",
+  "mass_kg": 0.027,
+  "mass_status": "Manufacturer listed nominal mass; exact installed battery/deck configuration may differ.",
+  "rotor_axis_offset_m": 0.03253,
+  "arm_radius_m": 0.046,
+  "arm_status": "The X-frame coordinate offset is fitted data; the radial arm length is sqrt(2) times this value.",
+  "inertia_diagonal_kg_m2": [0.0000143, 0.0000143, 0.0000289],
+  "inertia_status": "Approximation from physical Crazyflie 2.0 system-identification data at a different mass; must be re-identified for this 2.1 configuration.",
+  "thrust_coefficient_N_per_rad_s2": 2.2416943931103187e-8,
+  "reaction_torque_coefficient_Nm_per_rad_s2": 1.3306841290551622e-10,
+  "motor_coeff_status": "Dominant quadratic terms converted from the published Crazyflow cf2x_L250 fitted RPM curves. Linear curve terms are omitted in this quadratic runtime model.",
+  "maximum_rotor_speed_rpm": 22093.97215159431,
+  "maximum_thrust_per_rotor_N": 0.12,
+  "maximum_thrust_status": "Fitted cf2x_L250 model limit. Maximum RPM is derived from the quadratic runtime k_f and 0.12 N limit; the source RPM polynomial's linear term is omitted consistently with the runtime approximation.",
+  "motor_time_constant_s": 0.13595,
+  "motor_time_constant_status": "Symmetric first-order approximation using reciprocal of the published cf2x_L250 spin-up coefficient; asymmetric dynamics are not modeled yet.",
+  "aerodynamics_status": "Drag area and correlated wind parameters are engineering proxies, not identified Crazyflie 2.1 coefficients. Air density uses the standard sea-level nominal value.",
+  "sources": [
+    {
+      "parameter_group": "mass_kg",
+      "url": "https://store.bitcraze.io/products/crazyflie-2-1",
+      "notes": "Bitcraze lists the Crazyflie 2.1 at 27 g. The 2.1+ page lists 29 g, so battery/revision differences matter."
+    },
+    {
+      "parameter_group": "rotor_axis_offset_m, thrust, torque, rotor dynamics",
+      "url": "https://raw.githubusercontent.com/learnsyslab/crazyflow/main/crazyflow/dynamics/first_principles/params.toml",
+      "notes": "Open Crazyflow fitted cf2x_L250 values: L=0.03253 m, thrust/torque polynomials, maximum per-rotor thrust 0.12 N, and spin-up coefficient 7.3556 s^-1. Quadratic coefficients converted from RPM to rad/s. This is a 2.x fitted configuration and is not a manufacturer specification."
+    },
+    {
+      "parameter_group": "inertia_diagonal_kg_m2",
+      "url": "https://github.com/yrlu/quadrotor/blob/master/control/crazyflie.m",
+      "notes": "Published Crazyflie 2.0 physical-model estimates (Ixx=Iyy=1.43e-5, Izz=2.89e-5 kg m^2); adopted provisionally for 2.1 and 27 g."
+    },
+    {
+      "parameter_group": "frame_span_check",
+      "url": "https://www.bitcraze.io/products/crazyflie-2-1-plus/",
+      "notes": "Bitcraze lists 92 mm motor-to-motor for 2.1+. The selected axis offset gives 91.9 mm diagonal motor spacing."
+    }
+  ]
+}
