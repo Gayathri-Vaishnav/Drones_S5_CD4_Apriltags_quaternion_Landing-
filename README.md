@@ -357,7 +357,7 @@ f = m(a_{cmd}+g\,e_3),\qquad b_3=\frac{f}{\lVert f\rVert},\qquad b_2=\frac{b_3\t
 $$
 
 $$
-q_{err}=q^*\otimes q_{des}\ \ (\text{flip if } w_{err}<0),\qquad e_R=2\,\mathrm{atan2}(\lVert\vec v_{err}\rVert,w_{err})\frac{\vec v_{err}}{\lVert\vec v_{err}\rVert},\qquad \tau=J(K_R\,e_R-K_\omega\,\omega)
+q_{err}=q^*\otimes q_{des}\ \ (\text{flip if } w_{err}<0),\qquad e_R=2\,\mathrm{atan2}(\lVert\vec q_{err}\rVert,w_{err})\frac{\vec q_{err}}{\lVert\vec q_{err}\rVert},\qquad \tau=J(K_R\,e_R-K_\omega\,\omega)
 $$
 
 **In plain words:** to move sideways the drone must lean. The required force $f$ gives the new "up" axis $b_3$. For example, accelerating at 2 m/s² needs a lean of $\arctan(2/9.81)=11.5^\circ$. The error between where the drone points and where it should point is *one* quaternion product, and the sign check always picks the short way round: 179° → −179° is a 2° turn, not 358°. With $K_R=130$ and $K_\omega=22$ the attitude loop has $\omega_n=11.4$ rad/s and $\zeta=0.97$, so it settles with almost no overshoot.
