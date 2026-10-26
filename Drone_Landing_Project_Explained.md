@@ -17,7 +17,7 @@
 | 5. **Tilting the drone** | How do I make that velocity happen? | velocity → tilt → motor torques |
 
 - The **camera** gives a new picture **25 times a second** (25 Hz).
-
+- The **controller** runs **100 times a second** (100 Hz).
 - Between two pictures the drone **predicts**. When a new picture arrives, it **corrects** the prediction.
 
 > **Real-life example:** a delivery rider. Their **eyes** read the door number (1). They notice the customer **walking towards them** (2). They **steer** towards the door (3). They know **which way they are facing** (4). Their **body leans** to turn the bike (5).
