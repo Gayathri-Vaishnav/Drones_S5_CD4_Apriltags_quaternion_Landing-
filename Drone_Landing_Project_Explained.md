@@ -16,7 +16,6 @@
 | 4. **Pose and quaternions** | Which way is everything pointing? | rotations, heading of the pad |
 | 5. **Tilting the drone** | How do I make that velocity happen? | velocity → tilt → motor torques |
 
-- The **camera** gives a new picture **25 times a second** (25 Hz).
 - The **controller** runs **100 times a second** (100 Hz).
 - Between two pictures the drone **predicts**. When a new picture arrives, it **corrects** the prediction.
 
