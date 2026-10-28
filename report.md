@@ -56,7 +56,18 @@ The same model was implemented in MuJoCo (with real rendered camera images and a
 ---
 
 ## 2. Introduction
+Drone delivery of medicines, blood units and parcels needs the vehicle to land on a precise spot: a doorstep locker, a rooftop pad, or the deck of a delivery van. Satellite navigation is accurate to a few metres in the open, and it degrades between tall buildings, indoors and under trees. A radio beacon such as an AirTag behaves similarly: it brings the drone to the right street, but its error (about ±2.5 m in our model) is larger than the pad.
 
+The project therefore works in two stages:
+
+1. **Radio stage:** the beacon gets the drone to the right street. This is like a map app bringing a courier to the building.
+2. **Vision stage:** a downward camera reads an **AprilTag** printed on the pad, the way the courier reads the door number. The tag tells the drone *which* pad it is (by its ID) and *where* the pad is, to within a few centimetres (by its geometry).
+
+The base paper by Li et al. (2019) demonstrated this vision stage on a real DJI M100, landing on one static tag and following a ground vehicle. Three questions remained open, and they define this project:
+
+1. How can the pad be read at **every height** of the descent?
+2. How can the drone land on a pad that is **moving and turning**?
+3. How can attitude be handled **without the singularities** of Euler angles?
 
 
 ---
